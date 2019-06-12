@@ -1,0 +1,336 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 10px;
+}
+
+li {	/*	所有的li小圆点清除*/
+		list-style: none;
+	}
+a {
+	text-decoration: none;/*所有的A标签下划线清除*/
+}
+i {
+	font-style: normal;
+}
+	/*头部开始*/ 
+
+
+.lu-nav{
+	width: 100%;
+	height: 4.8rem;
+	min-width: : 30rem;
+	background-color: #0e0e0e;
+}
+.lu-logo-link {
+	width: 12.2rem;
+	height: 2.6rem;
+	margin-top: 8px;
+	margin-left: 20px;
+	background-color: #0e0e0e;
+	float: left;
+}
+.lu-logo-link img {
+	width: 100%;
+	height: 100%;
+}
+.lu-gengduo {
+	float: right;
+	width: 4rem;
+	height: 100%;
+	background-color: #0e0e0e;
+	box-sizing: border-box;
+	padding-top: 14px;
+}
+.lu-gengduo img {
+	width: 20px;
+	height: 20px;
+}
+.lu-geren {
+	float: right;
+	width: 4rem;
+	height: 100%;
+	background-color: #0e0e0e;
+	box-sizing: border-box;
+	padding-top: 14px;
+}
+.lu-geren img {
+	width: 20px;
+	height: 20px
+}
+/*	头部结束 */
+
+/*主页开始*/
+.lu-wrap {
+	width: 100%;
+	margin-top: 60px;
+	background-color: #FFF;
+}
+.lu-wrap-main {
+	width: 100%;
+	height: 4.5rem;
+	line-height: 2.6rem;
+	border-top: 20px solid #f5f5f5;
+	background-color: #fff;
+	font-size: 13px;
+}
+.lu-crumb {
+	width: 100%;
+	height: 100%;
+	margin-bottom: 20px;
+}
+.lu-crumb li {
+	display: inline-block;
+    padding-left: 5px;
+}
+.lu-crumb li a{
+	color: rgba(0,0,0,0.6);
+}
+.lu-crumb li:first-child a{
+	color: black;
+}
+.lu-list {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 10px;
+}
+/*第一表单开始*/
+.lu-list-1  {
+	width: 100%;
+	padding: 10px 0 40px 0;
+	border-bottom: 1px solid #E5E5E5;
+}
+.lu-list-1  h3 {
+	display: block;
+	color: #333;
+    font-size: 24px;
+	line-height: 2.6rem;
+	font-weight: normal;
+	margin-bottom: 2rem;
+}
+.lu-list-1  h3 span {
+	display: inline-block;
+	float: inherit;
+	font-size: 14px;
+	height: 28px;
+	padding: 0 10px;
+	margin-right: 12px;
+	color: #fff;
+	background-color: #f9a015;
+	border-radius: 3px;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 28px;
+}
+.lu-list-1 li p {
+	display: block;
+	margin: 10px 0;
+	overflow: hidden;
+}
+.lu-list-1  a {
+	color: #0886e9;
+}
+.lu-list-1  i {
+	display: block;
+	font-size: 12px;
+	color: #333;
+	line-height: 2;
+	margin: 10px 0;
+}
+.lu-list-1  span {
+	display: block;
+	font-size: 12px;
+	line-height: 3;
+	text-align: right;
+}
+/*第一表单结束*/
+
+/*第二表单开始*/
+.lu-list-2  {
+	width: 100%;
+	padding:  40px 0;
+	border-bottom: 1px solid #E5E5E5;
+}
+.lu-list-2  h3 {
+	display: block;
+	color: #333;
+    font-size: 24px;
+	line-height: 2.6rem;
+	font-weight: normal;
+	margin-bottom: 2rem;
+}
+.lu-list-2  h3 span {
+	display: inline-block;
+	float: inherit;
+	font-size: 14px;
+	height: 28px;
+	padding: 0 10px;
+	margin-right: 12px;
+	color: #fff;
+	background-color: #f9a015;
+	border-radius: 3px;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 28px;
+}
+.lu-list-2 p {
+	color: #333;
+	font-size: 16px;
+	line-height: 2;
+	margin: 10px 0;
+}
+.lu-list-2  span {
+	display: block;
+	font-size: 12px;
+	line-height: 3;
+	text-align: right;
+}
+/*第二表单结束*/
+
+/*第三表单开始*/
+.lu-list-3  {
+	width: 100%;
+	padding:  40px 0;
+	border-bottom: 1px solid #E5E5E5;
+}
+.lu-list-3  h3 {
+	display: block;
+	color: #333;
+    font-size: 24px;
+	line-height: 2.6rem;
+	font-weight: normal;
+	margin-bottom: 2rem;
+}
+.lu-list-3  h3 span {
+	display: inline-block;
+	float: inherit;
+	font-size: 14px;
+	height: 28px;
+	padding: 0 10px;
+	margin-right: 12px;
+	color: #fff;
+	background-color: #f9a015;
+	border-radius: 3px;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 28px;
+}
+.lu-list-3 p {
+	font-family: 宋体;
+	color: black;
+	font-size: 12px;
+	line-height: 2;
+	margin: 10px 0;
+}
+.lu-list-3  span {
+	display: block;
+	font-size: 12px;
+	line-height: 3;
+	text-align: right;
+}
+/*第三表单结束*/
+
+/*第四表单开始*/
+.lu-list-4  {
+	width: 100%;
+	padding:  40px 0;
+	border-bottom: 1px solid #E5E5E5;
+}
+.lu-list-4  h3 {
+	display: block;
+	color: #333;
+    font-size: 24px;
+	line-height: 2.6rem;
+	font-weight: normal;
+	margin-bottom: 2rem;
+}
+.lu-list-4  h3 span {
+	display: inline-block;
+	float: inherit;
+	font-size: 14px;
+	height: 28px;
+	padding: 0 10px;
+	margin-right: 12px;
+	color: #fff;
+	background-color: #f9a015;
+	border-radius: 3px;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 28px;
+}
+.lu-list-4 p {
+	color: #0000009c;
+	font-size: 12px;
+	line-height: 2;
+	margin: 10px 0;
+}
+.lu-list-4 p a {
+	color: #0886e9;
+	font-size: 12px;
+	line-height: 2;
+}
+.lu-list-4  span {
+	display: block;
+	font-size: 12px;
+	line-height: 3;
+	text-align: right;
+}
+/*第四表单结束*/
+
+/*第五表单开始*/
+.lu-list-5  {
+	width: 100%;
+	padding:  40px 0;
+	border-bottom: 1px solid #E5E5E5;
+}
+.lu-list-5  h3 {
+	display: block;
+	color: #333;
+    font-size: 24px;
+	line-height: 2.6rem;
+	font-weight: normal;
+	margin-bottom: 2rem;
+}
+.lu-list-5  h3 span {
+	display: inline-block;
+	float: inherit;
+	font-size: 14px;
+	height: 28px;
+	padding: 0 10px;
+	margin-right: 12px;
+	color: #fff;
+	background-color: #f9a015;
+	border-radius: 3px;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 28px;
+}
+.lu-list-5 p {
+	color: #333;
+	font-size: 12px;
+	line-height: 2;
+	margin: 10px 0;
+	text-indent: 2em;
+}
+.lu-list-5  span {
+	display: block;
+	font-size: 12px;
+	line-height: 3;
+	text-align: right;
+}
+/*第五表单结束*/
+
+/*下一页开始*/
+.lu-page {
+	width: 100%;
+    box-sizing: border-box;
+	padding: 10px 30px;
+	margin: 20px 0 10px 0 ;
+	border:1px solid #eee;
+	text-align: center;
+	cursor: pointer;
+}
+/*下一页结束*/
+/*主页结束*/
