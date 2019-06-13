@@ -1,0 +1,107 @@
+define('doc/index', [
+    'exports',
+    'jquery',
+    'babel-runtime/helpers/interop-require-default',
+    'underscore',
+    'isMobile',
+    '../common',
+    './pdfDownload',
+    '../xtil'
+], function (exports, _jquery, _babelRuntimeHelpersInteropRequireDefault, _underscore, _isMobile, _common, _pdfDownload, _xtil) {
+    exports.__esModule = true;
+    var _$ = _babelRuntimeHelpersInteropRequireDefault['default'](_jquery);
+    var _u = _babelRuntimeHelpersInteropRequireDefault['default'](_underscore);
+    var _isMobile2 = _babelRuntimeHelpersInteropRequireDefault['default'](_isMobile);
+    var _common2 = _babelRuntimeHelpersInteropRequireDefault['default'](_common);
+    var _pdfDownLoad = _babelRuntimeHelpersInteropRequireDefault['default'](_pdfDownload);
+    var _xtil2 = _babelRuntimeHelpersInteropRequireDefault['default'](_xtil);
+    var getHeight = function getHeight(blocks) {
+        var heights = _u['default'].map(blocks, function (item, index) {
+            return _$['default'](item).innerHeight();
+        });
+        return Math.max.apply(null, heights);
+    };
+    var resourcesCard = function resourcesCard(ele) {
+        var cardItems = _$['default'](ele).find('.cardItem');
+        var cards = _$['default'](cardItems[0]).find('.item');
+        cards.css('height', getHeight(cards));
+        _$['default'](ele).find('.cardNav li').on('click', function (e) {
+            var target = _$['default'](e.target);
+            var index = target.index();
+            target.addClass('active').siblings().removeClass('active');
+            cardItems.eq(index).addClass('active').siblings().removeClass('active');
+            var blocks = cardItems.eq(index).find('.item');
+            blocks.css('height', getHeight(blocks));
+        });
+    };
+    var cardLinks = function cardLinks(element) {
+        var ele = _$['default'](element);
+        var blocks = ele.find('article');
+        blocks.css('height', getHeight(blocks));
+    };
+    var linkListNew = function linkListNew(element) {
+        var ele = _$['default'](element);
+        var blocks = ele.find('article');
+        blocks.css('height', getHeight(blocks));
+    };
+    var uiFunMap = {
+        'resources-card': resourcesCard,
+        'card-links': cardLinks,
+        'link-list-new': linkListNew
+    };
+    var bindNavEvent = function bindNavEvent() {
+        _$['default']('.navItem h3').click(function (e) {
+            if (_$['default'](this).hasClass('h3Active')) {
+                _$['default'](this).removeClass('h3Active').next().removeClass('ulActive');
+            } else {
+                var siblings = _$['default'](this).parent().siblings();
+                siblings.find('.h3Active').removeClass('h3Active');
+                siblings.find('.ulActive').removeClass('ulActive');
+                _$['default'](this).addClass('h3Active').next().addClass('ulActive');
+            }
+        });
+        var pageHeight = _$['default'](window).height() - 60;
+        var documentHeight = _$['default']('.module-box').height();
+        var initHeight = pageHeight > documentHeight ? documentHeight : pageHeight;
+        var docAllProduct = _$['default']('.docAllProduct');
+        docAllProduct.height(initHeight);
+        _$['default']('.serviceName .humberger').on('mouseenter', function (e) {
+            docAllProduct.addClass('active');
+        }).on('mouseleave', function (e) {
+            docAllProduct.removeClass('active');
+        });
+        _$['default']('.nav-switch i').on('click', function () {
+            var me = _$['default'](this);
+            me.removeClass('active');
+            me.siblings().addClass('active');
+            _$['default']('.left-nav').toggleClass('active');
+        });
+        _$['default']('.navItem li').find('a').on('click', function (e) {
+            var target = _$['default'](this);
+            var link = target.attr('href');
+            var resolveUrl = _xtil2['default'].resolveUrl(link);
+            var hash = resolveUrl.hash || '';
+            var linkParts = link.split('/');
+            linkParts.pop();
+            var newUrl = linkParts.join('/') + '.html' + hash;
+            window.location = newUrl;
+            return false;
+        });
+    };
+    var pageinit = function pageinit() {
+        bindNavEvent();
+        _$['default']('section[ui-type]').each(function (index, element) {
+            var ele = _$['default'](element);
+            var type = ele.attr('ui-type');
+            if (uiFunMap[type]) {
+                uiFunMap[type](element);
+            }
+        });
+    };
+    var init = function init() {
+        _common2['default'].init();
+        _pdfDownLoad['default'].init();
+        pageinit();
+    };
+    exports.init = init;
+});

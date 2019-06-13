@@ -1,0 +1,43 @@
+define('slug', ['exports'], function (exports) {
+    exports.__esModule = true;
+    function trim(text) {
+        return text.replace(/\.(md|html)$/, '');
+    }
+    var encode = function encode(slug) {
+        var length = trim(slug).length;
+        return length.toString(16).toUpperCase() + '.5C' + slug;
+    };
+    exports.encode = encode;
+    var decode = function decode(slug) {
+        if (isValid(slug)) {
+            return slug.replace(/^[0-9a-z]+\.5C/ig, '');
+        }
+        return slug;
+    };
+    exports.decode = decode;
+    var getDocumentPath = function getDocumentPath(opt_pathname) {
+        var pathname = opt_pathname || location.pathname;
+        var filename = pathname.split('/').pop();
+        if (isValid(filename)) {
+            return pathname.replace('/' + filename.replace(/\.(md|html)$/, ''), '');
+        }
+        return pathname;
+    };
+    exports.getDocumentPath = getDocumentPath;
+    var isValid = function isValid(slug) {
+        if (!slug) {
+            return false;
+        }
+        var delimiterIndex = slug.indexOf('.5C');
+        if (delimiterIndex === -1) {
+            return false;
+        }
+        var lengthText = slug.substr(0, delimiterIndex);
+        var length = parseInt(lengthText, 16);
+        if (isNaN(length)) {
+            return false;
+        }
+        return 3 + length === trim(slug).length - lengthText.length;
+    };
+    exports.isValid = isValid;
+});

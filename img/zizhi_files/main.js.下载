@@ -1,0 +1,17 @@
+define('crypto/main', [
+    'exports',
+    './md5',
+    'babel-runtime/helpers/interop-require-default'
+], function (exports, _md5, _babelRuntimeHelpersInteropRequireDefault) {
+    exports.__esModule = true;
+    var _Md5Hash = _babelRuntimeHelpersInteropRequireDefault['default'](_md5);
+    var createHash = function createHash(type) {
+        if (type === 'md5') {
+            return new _Md5Hash['default']();
+        }
+        throw new Error('Unsupported hash type: ' + type);
+    };
+    exports.createHash = createHash;
+});
+
+define('crypto', ['crypto/main'], function (main) { return main; });

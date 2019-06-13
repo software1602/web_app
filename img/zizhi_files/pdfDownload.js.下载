@@ -1,0 +1,70 @@
+define('doc/pdfDownload', [
+    'exports',
+    'jquery',
+    'babel-runtime/helpers/interop-require-default',
+    'isMobile'
+], function (exports, _jquery, _babelRuntimeHelpersInteropRequireDefault, _isMobile) {
+    exports.__esModule = true;
+    var _$ = _babelRuntimeHelpersInteropRequireDefault['default'](_jquery);
+    var _isMobile2 = _babelRuntimeHelpersInteropRequireDefault['default'](_isMobile);
+    _$['default'].event.special.tap = {
+        setup: function setup(data, namespaces) {
+            var $elem = _$['default'](this);
+            $elem.bind('touchstart', _$['default'].event.special.tap.handler).bind('touchmove', _$['default'].event.special.tap.handler).bind('touchend', _$['default'].event.special.tap.handler);
+        },
+        teardown: function teardown(namespaces) {
+            var $elem = _$['default'](this);
+            $elem.unbind('touchstart', _$['default'].event.special.tap.handler).unbind('touchmove', _$['default'].event.special.tap.handler).unbind('touchend', _$['default'].event.special.tap.handler);
+        },
+        handler: function handler(event) {
+            event.preventDefault();
+            var $elem = _$['default'](this);
+            $elem.data(event.type, 1);
+            if (event.type === 'touchend' && !$elem.data('touchmove')) {
+                event.type = 'tap';
+                _$['default'].event.handle.apply(this, arguments);
+            } else if ($elem.data('touchend')) {
+                $elem.removeData('touchstart touchmove touchend');
+            }
+        }
+    };
+    var getBOSUrl = function getBOSUrl(id) {
+        return 'https://bce-cdn.bj.bcebos.com/doc/pdf/' + id + '.zh.pdf?timeStamp=' + new Date().getTime();
+    };
+    var getCDNurl = function getCDNurl(id) {
+        return 'https://bce.bdstatic.com/doc/pdf/' + id + '.zh.pdf?timeStamp=' + new Date().getTime();
+    };
+    var getId = function getId() {
+        return document.location.pathname.match(/\/doc\/(.+?)\//)[1];
+    };
+    var setButton = function setButton(id) {
+        return _$['default']('.module-box').append('<div class="pdfDownload"><a href="' + getBOSUrl(id) + '" target="_blank"><i class="svg" style="background-image: url(/img/doc/download.2x.png)"></i>下载全部文档</a></div>');
+    };
+    var hasPdf = function hasPdf(id) {
+        _$['default'].ajax({
+            url: getBOSUrl(id),
+            method: 'HEAD'
+        }).success(function (response) {
+            setButton(id);
+        });
+    };
+    var flag = function flag(callback) {
+        var url = '/flags/i.html';
+        var iframe = _$['default']('<iframe src="' + url + '"></iframe>');
+        _$['default']('body').append(iframe);
+        iframe.on('load', callback);
+    };
+    var init = function init() {
+        if (_isMobile2['default'].any) {
+            return;
+        }
+        flag(function () {
+            var ifdocument = this.contentWindow.document.getElementById('pdfDownload');
+            if (_$['default'](ifdocument).find('p').text()) {
+                hasPdf(getId());
+            }
+            _$['default'](this).remove();
+        });
+    };
+    exports.init = init;
+});

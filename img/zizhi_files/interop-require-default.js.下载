@@ -1,0 +1,7 @@
+define('babel-runtime/helpers/interop-require-default', ['require'], function (require) {
+    var exports = {};
+    exports['default'] = function (obj) {
+        return { 'default': obj };
+    };
+    return exports;
+});
