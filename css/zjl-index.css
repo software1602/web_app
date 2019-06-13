@@ -41,8 +41,9 @@ main{
     position: relative;
 }
 .zjl-slide ul{
-    width: 1080px;
+    width: 300%;
     transition:all 0.5s;
+    float: left;
 }
 
 /*//自动播放*/
@@ -52,30 +53,33 @@ main{
 
 .zjl-slide li a{
     float: left;
-    width: 360px;
+    width: 33.3%;
     height: 29.9625rem;
     list-style: none;
 }
 .zjl-slide li:nth-child(1) a{
     background-image: url(../img/1.jpg);
-    background-size: 360px 29.9625rem;
+    background-size: 100% 29.9625rem;
+    
 }
 .zjl-slide li:nth-child(2) a{
     background-image: url(../img/2.jpg);
-    background-size: 360px 29.9625rem;
+    background-size: 100% 29.9625rem;
+    
 }
 .zjl-slide li:nth-child(3) a{
     background-image: url(../img/3.jpg); 
-    background-size: 360px 29.9625rem;
+    background-size: 100% 29.9625rem;
+    
 }
 
 @keyframes marginLeft{
     0%{margin-left: 0;}
     28.5%{margin-left: 0;}
-    33.3%{margin-left: -360px;;}
-    62%{margin-left: -360px;;}
-    66.7%{margin-left: -720px;}
-    95.2%{margin-left: -720px;}
+    33.3%{margin-left: -100%;}
+    62%{margin-left: -100%;}
+    66.7%{margin-left: -200%;}
+    95.2%{margin-left: -200%;}
     100%{margin-left: 0;}
 }
 
@@ -117,22 +121,22 @@ main{
     height: 2.55rem;
     width: 3.4rem;
 }
-.platform a:nth-child(2) article .icon{
+.platform a:first-child article .icon{
     background: url(../img/icon_7f425a0e.png) 0 0 no-repeat;
     background-size: 31.875rem 69.275rem;
     background-position: 0 -8.925rem;
 }
-.platform a:nth-child(3) article .icon{
+.platform a:nth-child(2) article .icon{
     background: url(../img/icon_7f425a0e.png) 0 0 no-repeat;
     background-size: 31.875rem 69.275rem;
     background-position: 0 0;
 }
-.platform a:nth-child(4) article .icon{
+.platform a:nth-child(3) article .icon{
     background: url(../img/icon_7f425a0e.png) 0 0 no-repeat;
     background-size: 31.875rem 69.275rem;
     background-position: 0 -2.975rem;
 }
-.platform a:nth-child(5) article .icon{
+.platform a:nth-child(4) article .icon{
     background: url(../img/icon_7f425a0e.png) 0 0 no-repeat;
     background-size: 31.875rem 69.275rem;
     background-position: 0 -5.95rem;
