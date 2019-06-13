@@ -17,12 +17,16 @@ html, body {
 a{
     text-decoration: none;
     color: #000;
+    display: block;
 }
 li{
     list-style: none;
 }
 section{
+    padding: 0;
     width: 100%;
+    margin-top: 20px;
+    box-sizing: border-box;
 }
 .left{
     float: left;
