@@ -1,0 +1,133 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.l_all{
+	background: url(../img/bg-1920x1080.png) no-repeat center center #000;
+	height: 340px;
+}
+header{
+	background-color: rgba(23, 23, 23, .35);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+}
+.l_header_div1 {
+	height: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+.l_header_div2 img{
+	margin-left: 10px;
+	float: left;
+	margin-top: 17px;
+}
+.l_header_div3{
+	float: right;
+	margin-top: 18px;
+	margin-right: 10px;
+}
+.l_header_div3 a{
+	color: #fff;
+	font-size: 14px;
+	text-decoration: none;
+}
+.l_text{
+	height: 124px;
+	width: 100%;
+	/*position: absolute;*/
+	/*top: 0;*/
+	z-index: 100;
+	padding-top: 64px;
+}
+.l_text h2{
+	text-align: center;
+	color: #fff;
+	font-size: 32px;
+	font-weight: normal;
+}
+.l_text h3{
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+	opacity: 0.6;
+	margin: 10px 0;
+	font-weight: normal;
+}
+.l_topic{
+	/*width: 835px;*/
+	width: auto;
+	border: none;
+	padding-top: 0;
+	background-color: #fff;
+	padding:  20px;
+	box-shadow: 0 4px 5px 0 rgba(0,0,0,0.09);
+	margin: 0 auto;
+}
+.l_topic p{
+	text-align: right;
+	color: #666;
+	margin: 0 auto;
+	font-size: 14px;
+	display: block;
+}
+.l_topic a{
+	text-decoration: none;
+	color: #108CEE;
+}
+/*.l_from1, .l_from2, .l_from3, .l_from4, .l_from5, .l_from6{
+	margin: 0 auto;
+	width: 417px;
+}*/
+.l_from1{
+	margin: 20px 0;
+}
+
+.l_from1 input{
+	display: block;
+	height: 38px;
+	width: 320px;
+	padding-left: 10px;
+	font-size: 14px;
+	border: 1px solid #ccc;
+}
+.l_from2 input{
+	height: 38px;
+	width: 47%;
+	padding-left: 10px;
+	font-size: 14px;
+	border: 1px solid #ccc;
+}
+.l_from2 button{
+	background-color: #ccc;
+	color: #fff;
+	width: 35%;
+	height: 40px;
+	border: none;
+	font-size: 14px;
+	margin-left: 10px;
+}
+.l_from3{
+	margin: 20px 0;
+	font-size: 15px;
+}
+.l_from4 a{
+	text-decoration: none;
+	color: #108CEE;
+	font-size: 12px;
+	text-align: center;
+}
+.l_from5{
+	margin: 25px 0;
+}
+.l_from5 button{
+	background-color: #ccc;
+	color: #fff;
+	cursor: not-allowed;
+	font-size: 16px;
+	border: none;
+	height: 42px;
+	width: 100%;
+}
+/*@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 640px) and (min-device-width: 360px)*/
