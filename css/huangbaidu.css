@@ -1,0 +1,122 @@
+*{
+	font-size:10px;
+	line-height:2;
+	padding:0;
+	margin:0;
+}
+ul,li{
+	list-style:none;
+	
+}
+a{
+	text-decoration:none;
+	color:black;
+}
+a:hover{
+	text-decoration:underline;
+}
+h3{
+	font-size:10px;
+}
+.huang-container{
+    align-content:center;
+    justify-content:center;
+    display:-webkit-flex;
+	display: flex;
+	flex-direction:cloumn;
+	flex-wrap:wrap;
+	-webkit-flex-wrap:wrap;
+}
+.huang-outer-1{
+	width:96%;
+	border:1px solid #d6d6d6;
+	height:device-height;
+	margin:6px 2%;
+}
+.huang-title-1{
+	border-bottom:1px solid #d6d6d6;
+	background-color:#F0F0F0;
+}
+.huang-title-1 h3{
+	padding:0.5rem 4%;
+}
+.huang-content-1 ul{
+	display:-webkit-flex;
+	display: flex;
+	flex-direction:cloumn;
+	flex-wrap:wrap;
+	-webkit-flex-wrap:wrap;
+   
+}
+.huang-content-1 li{
+	display:-webkit-flex;
+	display: flex;
+	flex-direction:column;
+	align-content:center;
+	justify-content:center;
+	text-intent:2rem;
+}
+.huang-content-1 a{
+	
+	margin-left:2rem;
+}
+.huang-outer-2{
+	width:96%;
+	border:1px solid #d6d6d6;
+	height:device-height;
+	margin-bottom:6px;
+	margin-left:2%;
+	margin-right:2%;
+}
+.huang-title-2{
+	border-bottom:1px solid #d6d6d6;
+	background-color:#F0F0F0;
+}
+.huang-title-2 h3{
+	padding:0.5rem 4%;
+}	
+.huang-content-2 ul{
+	display:-webkit-flex;
+	display: flex;
+	flex-direction:cloumn;
+	flex-wrap:wrap;
+	-webkit-flex-wrap:wrap;
+	margin-left:2rem;
+	}
+.huang-content-2 li{
+	display:-webkit-flex;
+	display: flex;
+	flex-direction:column;
+	align-content:center;
+	justify-content:center;
+}
+.huang-outer-3{
+	width:96%;
+	border:1px solid #d6d6d6;
+	height:device-height;
+	margin-bottom:6px;
+	margin-left:2%;
+	margin-right:2%;
+}
+.huang-title-3{
+	border-bottom:1px solid #d6d6d6;
+	background-color:#F0F0F0;
+}
+.huang-title-3 h3{
+	padding:0.5rem 4%;
+}	
+.huang-content-3 ul{
+	display:-webkit-flex;
+	display: flex;
+	flex-direction:cloumn;
+	flex-wrap:wrap;
+	-webkit-flex-wrap:wrap;
+	
+}
+.huang-content-3 li{
+	display:-webkit-flex;
+	display: flex;
+	flex-direction:column;
+	align-content:center;
+	justify-content:center;
+}
