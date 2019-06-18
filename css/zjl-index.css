@@ -27,9 +27,485 @@ header{
 }
 /* 头部结束 */
 /* 主体开始 */
-/*main{
-    height: 800px;
-}*/
+main{
+    margin-top: 0;
+}
+   /* 轮播器开始 */
+.zjl-slide{
+    width: 100%;
+    margin-top: 0;
+    height: 29.9625rem;
+    position: relative;
+    background-color: #000;
+    overflow: hidden;
+    position: relative;
+}
+.zjl-slide ul{
+    width: 300%;
+    transition:all 0.5s;
+    float: left;
+}
+
+/*//自动播放*/
+.zjl-slide ul{        
+    animation: marginLeft 10s infinite;
+}
+
+.zjl-slide li a{
+    float: left;
+    width: 33.3%;
+    height: 29.9625rem;
+    list-style: none;
+}
+.zjl-slide li:nth-child(1) a{
+    background-image: url(../img/1.jpg);
+    background-size: 100% 29.9625rem;
+    
+}
+.zjl-slide li:nth-child(2) a{
+    background-image: url(../img/2.jpg);
+    background-size: 100% 29.9625rem;
+    
+}
+.zjl-slide li:nth-child(3) a{
+    background-image: url(../img/3.jpg); 
+    background-size: 100% 29.9625rem;
+    
+}
+
+@keyframes marginLeft{
+    0%{margin-left: 0;}
+    28.5%{margin-left: 0;}
+    33.3%{margin-left: -100%;}
+    62%{margin-left: -100%;}
+    66.7%{margin-left: -200%;}
+    95.2%{margin-left: -200%;}
+    100%{margin-left: 0;}
+}
+
+   /* 轮播器结束 */
+
+   /* 导航栏开始 */
+.platform{
+    height: 8.5rem;
+    background: #FFF;
+    text-align: center;
+    margin-top: 0;
+}
+.platform a{
+    display: block;
+}
+.platform article{
+    float: left;
+    width: 20%;
+    border-left: 1px solid #e6e6e6;
+    padding-top: 1.275rem;
+    box-sizing: border-box;
+}
+/* .platform a:first-child article{
+    border-left: none;
+} */
+.platform article h2{
+    font-size: 1.105rem;
+    color: #333;
+    line-height: 1.105rem;
+}
+.platform article p{
+    font-size: .935rem;
+    color: #666;
+    text-align: center;
+    line-height: .935rem;
+    margin: .595rem 0 .935rem 0;
+}
+.platform article img{
+    height: 2.55rem;
+    width: 3.4rem;
+}
+.platform a:first-child article .icon{
+    background: url(../img/icon_7f425a0e.png) 0 0 no-repeat;
+    background-size: 31.875rem 69.275rem;
+    background-position: 0 -8.925rem;
+}
+.platform a:nth-child(2) article .icon{
+    background: url(../img/icon_7f425a0e.png) 0 0 no-repeat;
+    background-size: 31.875rem 69.275rem;
+    background-position: 0 0;
+}
+.platform a:nth-child(3) article .icon{
+    background: url(../img/icon_7f425a0e.png) 0 0 no-repeat;
+    background-size: 31.875rem 69.275rem;
+    background-position: 0 -2.975rem;
+}
+.platform a:nth-child(4) article .icon{
+    background: url(../img/icon_7f425a0e.png) 0 0 no-repeat;
+    background-size: 31.875rem 69.275rem;
+    background-position: 0 -5.95rem;
+}
+.platform a:last-child article .icon{
+    background: url(../img/icon_7f425a0e.png) 0 0 no-repeat;
+    background-size: 31.875rem 69.275rem;
+    background-position: -5.95rem 0;
+}
+
+   /* 导航栏结束 */
+   /* 主体功能部分开始 */
+   /* 产品部分开始 */
+.zjl-module{
+    padding: 1.275rem .85rem;
+    background: #FFF;
+    width: 100%;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+.zjl-module h2{
+    font-size: 1.19em;
+    color: #666;
+    padding-left: .425rem;
+}
+.zjl-module h2::before{
+    content: '';
+    width: .17rem;
+    height: .935rem;
+    display: block;
+    margin: .4em .425rem 0 0;
+    background: #108cee;
+    float: left;
+}
+.zjl-module article {
+    padding-left: .425rem;
+    padding-right: .425rem;
+}
+.zjl-product article{
+    padding: 1.7rem .425rem 0 .425rem;
+    height: 7.225rem;
+    position: relative;
+    border-top: 1px solid #ebebeb;
+}
+.zjl-product article:first-child{
+    border-top: none;
+}
+.zjl-product img{
+    float: left;
+    width: 3.825rem;
+    height: 3.825rem;
+}
+.icon-products{
+    background: url(../img/products-icon_af9e7b0e.png) 0 0 no-repeat;
+    background-size: 3.825rem 25.5rem;
+}
+.zjl-product article:first-child img{
+    background-position: 0 0;
+}
+.zjl-product article:nth-child(2) img{
+    background-position: 0 -4.25rem;
+}
+.zjl-product article:nth-child(3) img{
+    background-position: 0 -8.5rem;
+}
+.zjl-product article:nth-child(4) img{
+    background-position: 0 -12.75rem;
+}
+.zjl-product article:nth-child(5) img{
+    background-position: 0 0;
+}
+.zjl-product article:last-child img{
+    background-position: 0 -21.25rem;
+}
+.zjl-product figcaption {
+    margin-left: 4.845rem;
+    margin-right: 6.8rem;
+}
+.zjl-product h3{
+    font-size: 1.275rem;
+    line-height: 1.275rem;
+    font-weight: normal;
+}
+.zjl-product p {
+    font-size: .935rem;
+    color: #666;
+    margin-top: .425rem;
+}
+.zjl-product .detail {
+    height: 7.225rem;
+    width: 5.1rem;
+    position: absolute;
+    top: 0;
+    right: .425rem;
+}
+.zjl-product .detail a {
+    position: absolute;
+    width: 5.1rem;
+    height: 2.21rem;
+    border-radius: 3px;
+    display: block;
+    border: 1px solid #108cee;
+    text-align: center;
+    line-height: 2.21rem;
+    font-size: 1.19rem;
+    color: #108cee;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.zjl-module .more {
+    height: 3.74rem;
+    font-size: 1.19rem;
+    text-align: center;
+    border-top: 1px solid #ebebeb;
+    line-height: 3.74rem;
+}
+.zjl-module .more a {
+    display: inline;
+    font-size: 1.19rem;
+    color: #666;
+}
+   /* 产品部分结束 */
+   /* 解决方案部分开始 */
+.zjl-solution article {
+    padding: 2.125rem .425rem 0 0;
+    height: 9.5625rem;
+    position: relative;
+    border-top: 1px solid #ebebeb;
+}
+.zjl-solution article:first-child{
+    border-top: none;
+}
+.zjl-solution figure {
+    padding-left: .425rem;
+}
+.zjl-solution figcaption {
+    width: 18.7rem;
+    float: left;
+}
+.zjl-solution h3 {
+    font-size: 1.53rem;
+    line-height: 1.53rem;
+    color: #000;
+    font-weight: normal;
+}
+.zjl-solution p {
+    font-size: 1.02rem;
+    color: #333;
+    width: 18.7rem;
+    margin-top: 1.02rem;
+    line-height: 1.275rem;
+}
+.zjl-solution img {
+    width: 9.3925rem;
+    height: 5.78rem;
+    float: right;
+}
+.icon{
+    background: url(../img/icon_7f425a0e.png) 0 0 no-repeat;
+    background-size: 31.875rem 69.275rem;
+}
+.zjl-solution .zjl-group a:nth-child(1) .icon{
+    background-position: 0 -11.9rem;
+}
+.zjl-solution .zjl-group a:nth-child(2) .icon{
+    background-position: 0 -17.85rem;
+}
+
+.zjl-solution .zjl-group a:nth-child(3) .icon{
+    background-position: 0 -23.8rem;
+}
+
+.zjl-solution .zjl-group a:nth-child(4) .icon{
+    background-position: 0 -29.75rem;
+}
+
+.zjl-solution .zjl-group a:nth-child(5) .icon{
+    background-position: 0 -35.7rem;
+}
+
+.zjl-solution .zjl-group a:nth-child(6) .icon{
+    background-position: 0 -41.65rem;
+}
+   /* 解决方案部分结束 */
+   /* 云市场部分开始 */
+.zjl-market .group {
+    width: 100%;
+    overflow: hidden;
+    padding: 0.425rem;
+}
+.zjl-market .group a {
+    display: block;
+    text-decoration: none;
+    padding: 1.0625rem 1.275rem .425rem 1.0625rem;
+    background-color: #f5fbff;
+    position: relative;
+    float: left;
+    width: 48%;
+    margin-top: 1.275rem;
+}
+.zjl-market .group a:nth-child(2n-1){
+    margin-right: 4%;
+}
+.zjl-market img{
+    float: left;
+    margin-top: .17rem;
+}
+.mir-img{
+    width: 1.9125rem;  
+    height: 1.8275rem; 
+}
+.sta-img{
+    width: 2.72rem;  
+    height: 1.7rem; 
+}
+.safe-img{
+    width: 1.8275rem;  
+    height: 1.785rem; 
+}
+.cloud-img{
+    width: 2.0825rem;  
+    height: 2.125rem; 
+}
+
+.zjl-market figcaption {
+    margin-left: 3.1875rem;
+    font-weight: 400;
+}
+.zjl-market .group h3 {
+    font-size: 1.275rem;
+    line-height: 1.275rem;
+    color: #000;
+}
+.zjl-market p {
+    font-size: .935rem;
+    color: #989aa3;
+    margin-top: .629rem;
+    margin-bottom: 1rem;
+    line-height: 1.19rem;
+    text-align: justify;
+}
+   /* 云市场部分结束 */
+   /* 广告1部分开始 */
+.zjl-event1 {
+    height: 8.925rem;
+    background: #0b0721 url(../img/icon_7f425a0e.png) center -47.6rem no-repeat;
+    background-size: 31.875rem 69.275rem;
+}
+.zjl-event1 a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+.zjl-event1 .group {
+    /* overflow: hidden; */
+    padding-left: 1.7rem;
+    position: relative;
+}
+.zjl-event1 h2,
+.zjl-event1 p {
+    font-size: 1.955rem;
+    line-height: 1.955rem;
+    margin-top: 2.5075rem;
+    display: inline-block;
+    /* color: #37f6bc; */
+    color: transparent;     /*文字透明色 */
+    background: -webkit-linear-gradient(left, #53f9f9, #27f498);    /*背景渐变色*/
+    -webkit-background-clip: text;   /*实现文字渐变  覆写bg-clip属性让背景裁剪到文字区域*/
+    /* -webkit-text-fill-color: transparent;      可以覆盖定义的color颜色*/
+}
+.zjl-event1 p{
+    font-size: 1.275rem;
+    line-height: 1.275rem;
+    margin-top: .85rem;
+    display: inline-block;
+}
+.zjl-event1 img {
+    width: 4.59rem;
+    height: 6.375rem;
+    position: absolute;
+    top: 1.36rem;
+    right: 2.465rem;
+}
+.icon-event1 {
+    background-position: 0 -57.375rem;
+}
+   /* 广告1部份结束 */
+   /* 新闻公告部分开始 */
+.zjl-news .group{
+    margin-top: 1.275rem; 
+}
+   /* 新闻公告部分结束 */
+   /* 广告2部分开始 */
+.zjl-event2{
+    padding: 1.7rem 1.275rem;
+    margin-top: 0;
+}
+.zjl-other-link{
+    display: block;
+    /* -webkit-border-radius: .34rem;
+    -moz-border-radius: .34rem; */
+    border-radius: .34rem;
+    background: #108cee;
+    font-size: 1.19rem;
+    color: #FFF;
+    height: 3.825rem;
+    line-height: 3.825rem;
+    text-align: center;
+}
+   /* 广告2部分结束 */
+   /* 客服部分开始 */
+.zjl-service{
+    margin-top: 0;
+    height: 8.5rem;
+    background: #2d2d30;
+    color: #FFF;
+}
+.zjl-service .container{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.zjl-service li{
+    float: left;
+    width: 50%;
+    text-align: center;
+    padding-top: 1.7rem;
+    position: relative;
+}
+.zjl-service li .icon{
+    width: 1.7rem;
+    height: 1.615rem;
+    margin: 0 auto;
+}
+.zjl-service li:first-child .icon{
+    background-position: 0 -65.875rem;
+}
+.zjl-service li:last-child .icon{
+    background-position: 0 -67.575rem;
+}
+.zjl-service li h2{
+    font-size: .765rem;
+    margin-top: .6375rem;
+}
+.zjl-service li p{
+    font-size: 1.275rem;
+    margin-top: .68rem;
+    line-height: normal;
+    font-weight: bold;
+}
+.zjl-service li p span{
+    font-size: .75rem;
+    line-height: normal;
+    font-weight: normal;
+}
+.zjl-service li::after{
+    content: '';
+    width: 1px;
+    height: 3.825rem;
+    display: block;
+    background: rgba(255,255,255,0.2);
+    position: absolute;
+    right: 0;
+    top: 2.975rem;
+}
+   /* 客服部份结束 */
+   /* 主体功能部分结束 */
 /* 主体结束 */
 /* 尾部开始 */
 footer{
@@ -55,6 +531,7 @@ footer .container{
     border: none;
 }
 .container a{
+    display: inline-block;
     color: #d6d6d6;
 }
 /* 尾部结束 */
